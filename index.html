@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="img/larry.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Larry Games... re-mark-able" />
+    <link rel="apple-touch-icon" href="img/larry.png" />
+    <title>Larry Games... re-mark-able</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/8b41e2246c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="main" data-bs-theme="dark">
+    <nav class="navbar bg-body-tertiary navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="img/larry.png"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          Larry Games... <small class="text-muted">re-mark-able</small>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav nav-underline" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                data-bs-toggle="tab"
+                data-bs-target="#home-tab-pane"
+                role="tab"
+                aria-controls="home-tab-pane"
+                aria-selected="true"
+                ><i class="fa-solid fa-house"></i> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="tab"
+                data-bs-target="#privacy-tab-pane"
+                role="tab"
+                aria-controls="privacy-tab-pane"
+                ><i class="fa-solid fa-shield-halved"></i> Privacy & Terms</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://discord.gg/r9WZ4ywbEx"
+                ><i class="fa-brands fa-discord"></i> Discord Server</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://discord.com/oauth2/authorize?client_id=1026495225759277146"
+                ><i class="fa-solid fa-robot"></i> Add Bot</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://top.gg/bot/1026495225759277146/vote"
+                ><i class="fa-solid fa-check-to-slot"></i> Vote</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="toggleDarkMode"
+            checked
+            onchange="toggleDarkMode()"
+          />
+          <label class="form-check-label" for="toggleDarkMode">Dark Mode</label>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home-tab-pane"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+          tabindex="0"
+        >
+          Home
+        </div>
+        <div
+          class="tab-pane fade"
+          id="privacy-tab-pane"
+          role="tabpanel"
+          aria-labelledby="privacy-tab"
+          tabindex="0"
+        >
+          <h5 id="conditions">Conditions</h5>
+          <p>General conditions regarding <strong>Larry Games</strong>:</p>
+          <ul>
+            <li>
+              Our terms and conditions apply to each and every user of
+              <strong>Larry Games</strong>.
+            </li>
+            <li>
+              By inviting <strong>Larry Games</strong> to your server, you agree
+              to these terms of service and the future terms which we may add
+              after a notice.
+            </li>
+          </ul>
+
+          <hr />
+
+          <h5 id="terms">Terms of Use</h5>
+          <ol>
+            <li>
+              Intentional command spam or attempts to crash the bot should not
+              be made.
+            </li>
+            <li>
+              <strong>Larry Games</strong> should not be used in bot spam
+              servers which cause command spam.
+            </li>
+            <li>
+              The <strong>Larry Games</strong> team reserves the rights to
+              prohibit any server or user from using
+              <strong>Larry Games</strong>.
+            </li>
+            <li>
+              The <strong>Larry Games</strong> team have the rights to update
+              terms of service anytime with a notice in the support server
+              (Larry's Lab).
+            </li>
+          </ol>
+
+          <hr />
+
+          <h5 id="privacy">Privacy Policy</h5>
+          <p>
+            The use of this application ("Bot") in a server requires the
+            collection of some specific user data ("Data"). The Data collected
+            includes, but is not limited to Discord user ID values. Use of the
+            Bot is considered an agreement to the terms of this Policy.
+          </p>
+          <h6>Access to Data</h6>
+          <p>
+            Access to Data is only permitted to Bot's developers, and only in
+            the scope required for the development, testing, and implementation
+            of features for Bot. Data is not sold, provided to, or shared with
+            any third party, except where required by law or a Terms of Service
+            agreement.
+          </p>
+          <h6>Data Storage</h6>
+          <p>
+            Data is stored in an Oracle Autonomous database. The database is
+            secured to prevent external access, however no guarantee is provided
+            and the Bot owners assume no liability for the unintentional or
+            malicious breach of Data. In the event of an unauthorised Data
+            access, users will be notified through the Discord client
+            application.
+          </p>
+          <h6>User Rights</h6>
+          <p>
+            At any time, you have the right to request to view the Data
+            pertaining to your Discord account. You may submit a request through
+            the Larry Games support server. You have the right to request the
+            removal of relevant Data.
+          </p>
+          <h6>Underage Users</h6>
+          <p>
+            The use of the Bot is not permitted for minors under the age of 13,
+            or under the age of legal consent for their country. This is in
+            compliance with the
+            <a href="https://discord.com/terms">Discord Terms of Service</a>. No
+            information will be knowingly stored from an underage user. If it is
+            found out that a user is underage we will take all necessary action
+            to delete the stored data.
+          </p>
+          <h6>Questions</h6>
+          <p>
+            If you have any questions or are concerned about what data might be
+            being stored from your account, ask in the
+            <a href="https://discord.gg/r9WZ4ywbEx"
+              >Larry Games support server</a
+            >. For more information check the
+            <a href="https://discord.com/terms">Discord Terms of Service</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+      integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      function toggleDarkMode() {
+        if (
+          document.getElementById("main").getAttribute("data-bs-theme") ==
+          "dark"
+        ) {
+          document
+            .getElementById("main")
+            .setAttribute("data-bs-theme", "light");
+          document.cookie = "darkmode=false";
+        } else {
+          document.getElementById("main").setAttribute("data-bs-theme", "dark");
+          document.cookie = "darkmode=true";
+        }
+      }
+
+      function setDarkMode() {
+        if (document.cookie == "darkmode=false") {
+          document
+            .getElementById("main")
+            .setAttribute("data-bs-theme", "light");
+        } else {
+          document.getElementById("main").setAttribute("data-bs-theme", "dark");
+        }
+      }
+    </script>
+  </body>
+</html>
