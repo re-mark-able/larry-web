@@ -71,10 +71,9 @@
             "Content-type": "application/json; charset=UTF-8",
           },
         }).then(async (response) => {
-          console.log("--response--", response);
           const data = await response.json();
-          console.log("--data--", data);
-          document.getElementById("pageContent").innerHTML = data;
+
+          document.getElementById("pageContent").innerHTML = data.content;
         });
       }
     </script>
