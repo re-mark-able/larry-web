@@ -40,7 +40,7 @@
       </div>
     </nav>
     <div class="container">
-      <form method="POST" action="https://localhost:3000/verify">
+      <form method="POST" action="http://localhost:3000/verify">
         <h2 class="h3 mb-3 fw-normal">Verify for Larry's Lab</h2>
         <p>Click verify to continue.</p>
         <input type="hidden" id="user_id" name="user_id" value="" />
@@ -49,10 +49,16 @@
           <div
             class="cf-turnstile"
             data-sitekey="0x4AAAAAABdPSmseeUsTofUZ"
+            data-callback="toggleVerify"
           ></div>
           <!-- end. -->
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">
+        <button
+          class="w-100 btn btn-lg btn-primary disabled"
+          disabled
+          type="submit"
+          id="submit"
+        >
           Verify
         </button>
       </form>
@@ -65,6 +71,12 @@
           .setAttribute("value", params.get("u"));
       }
       setUser();
+      function toggleVerify() {
+        document
+          .getElementById("user_id")
+          .setAttribute("disabled", false)
+          .classList.remove("disabled");
+      }
     </script>
   </body>
 </html>
