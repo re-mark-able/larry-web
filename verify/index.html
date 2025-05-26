@@ -57,7 +57,7 @@
           class="w-100 btn btn-lg btn-primary disabled"
           disabled="disabled"
           type="submit"
-          id="submit"
+          id="submit-btn"
         >
           Verify
         </button>
@@ -73,7 +73,7 @@
       setUser();
       function toggleVerify() {
         document
-          .getElementById("submit")
+          .getElementById("submit-btn")
           .classList.remove("disabled")
           .setAttribute("disabled", false);
       }
