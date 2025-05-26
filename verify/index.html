@@ -55,7 +55,7 @@
         </div>
         <button
           class="w-100 btn btn-lg btn-primary disabled"
-          disabled
+          disabled="disabled"
           type="submit"
           id="submit"
         >
@@ -75,7 +75,7 @@
         document
           .getElementById("submit")
           .classList.remove("disabled")
-          .setAttribute("disabled", false);
+          .removeA("disabled", false);
       }
     </script>
   </body>
