@@ -70,10 +70,9 @@
       }
       setUser();
       function toggleVerify() {
-        document
-          .getElementById("submit-btn")
-          .classList.remove("disabled")
-          .prop("disabled", false);
+        document.getElementById("submit-btn").classList.remove("disabled");
+
+        document.getElementById("submit-btn").prop("disabled", false);
       }
     </script>
   </body>
