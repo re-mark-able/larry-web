@@ -74,6 +74,9 @@
           const data = await response.json();
 
           document.getElementById("pageContent").innerHTML = data.content;
+          setTimeout(function () {
+            self.close();
+          }, 10000);
         });
       }
     </script>
