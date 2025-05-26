@@ -60,7 +60,9 @@
     <script type="text/javascript">
       function setUser() {
         let params = new URLSearchParams(document.location.search);
-        document.getElementById("user_id").setAttribute("u", params.get("u"));
+        document
+          .getElementById("user_id")
+          .setAttribute("user_id", params.get("u"));
       }
       setUser();
     </script>
