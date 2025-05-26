@@ -39,7 +39,7 @@
         </a>
       </div>
     </nav>
-    <div class="container">
+    <div class="container" id="pageContent">
       <form
         method="POST"
         id="verify_form"
@@ -78,8 +78,7 @@
             "Content-type": "application/json; charset=UTF-8",
           },
         });
-
-        console.log("response----", response);
+        document.getElementById("pageContent").innerHTML = response;
 
         // document.getElementById("verify_form").submit();
         //document.getElementById("submit-btn").classList.remove("disabled");
