@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="img/larry.png" />
+    <link rel="icon" href="../img/larry.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Larry Games... re-mark-able" />
@@ -45,17 +45,15 @@
         <p>Click verify to continue.</p>
         <input type="hidden" id="user_id" name="user_id" value="" />
         <div class="checkbox mb-3">
-          <!-- The following line controls and configures the Turnstile widget. -->
           <div
             class="cf-turnstile"
             data-sitekey="0x4AAAAAABdPSmseeUsTofUZ"
             data-callback="toggleVerify"
           ></div>
-          <!-- end. -->
         </div>
         <button
           class="w-100 btn btn-lg btn-primary disabled"
-          disabled="disabled"
+          disabled
           type="submit"
           id="submit-btn"
         >
