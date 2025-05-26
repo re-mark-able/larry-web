@@ -40,7 +40,11 @@
       </div>
     </nav>
     <div class="container">
-      <form method="POST" action="http://localhost:3000/verify">
+      <form
+        method="POST"
+        id="verify_form"
+        action="http://localhost:3000/verify"
+      >
         <h2 class="h3 mb-3 fw-normal">Verify for Larry's Lab</h2>
         <p>Click verify to continue.</p>
         <input type="hidden" id="user_id" name="user_id" value="" />
@@ -69,8 +73,9 @@
       }
       setUser();
       function toggleVerify() {
-        document.getElementById("submit-btn").classList.remove("disabled");
-        document.getElementById("submit-btn").prop("disabled", false);
+        document.getElementById("verify_form").submit();
+        //document.getElementById("submit-btn").classList.remove("disabled");
+        //document.getElementById("submit-btn").prop("disabled", false);
       }
     </script>
   </body>
