@@ -65,15 +65,21 @@
       </form>
     </div>
     <script type="text/javascript">
-      function setUser() {
-        let params = new URLSearchParams(document.location.search);
-        document
-          .getElementById("user_id")
-          .setAttribute("value", params.get("u"));
-      }
-      setUser();
       function toggleVerify() {
-        document.getElementById("verify_form").submit();
+        let params = new URLSearchParams(document.location.search);
+        fetch("https://jsonplaceholder.typicode.com/todos", {
+          method: "POST",
+          body: JSON.stringify({
+            userId: params.get("u"),
+            token: document.querySelector("input[name=cf-turnstile-response]")
+              .value,
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        });
+
+        // document.getElementById("verify_form").submit();
         //document.getElementById("submit-btn").classList.remove("disabled");
         //document.getElementById("submit-btn").prop("disabled", false);
       }
