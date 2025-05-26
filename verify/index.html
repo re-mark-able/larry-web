@@ -46,7 +46,7 @@
         action="http://localhost:3000/verify"
       >
         <h2 class="h3 mb-3 fw-normal">Verify for Larry's Lab</h2>
-        <p>Click verify to continue.</p>
+
         <input type="hidden" id="user_id" name="user_id" value="" />
         <div class="checkbox mb-3">
           <div
@@ -55,13 +55,6 @@
             data-callback="toggleVerify"
           ></div>
         </div>
-        <button
-          class="w-100 btn btn-lg btn-primary disabled"
-          type="submit"
-          id="submit-btn"
-        >
-          Verify
-        </button>
       </form>
     </div>
     <script type="text/javascript">
@@ -77,12 +70,9 @@
           headers: {
             "Content-type": "application/json; charset=UTF-8",
           },
+        }).then(() => {
+          document.getElementById("pageContent").innerHTML = response;
         });
-        document.getElementById("pageContent").innerHTML = response;
-
-        // document.getElementById("verify_form").submit();
-        //document.getElementById("submit-btn").classList.remove("disabled");
-        //document.getElementById("submit-btn").prop("disabled", false);
       }
     </script>
   </body>
