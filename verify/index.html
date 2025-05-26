@@ -43,6 +43,7 @@
       <form method="POST" action="https://localhost:3000/verify">
         <h2 class="h3 mb-3 fw-normal">Verify for Larry Games</h2>
         <p>Click verify to continue.</p>
+        <input type="hidden" id="user_id" name="user_id" value="" />
         <div class="checkbox mb-3">
           <!-- The following line controls and configures the Turnstile widget. -->
           <div
@@ -56,5 +57,12 @@
         </button>
       </form>
     </div>
+    <script type="text/javascript">
+      function setUser() {
+        let params = new URLSearchParams(document.location.search);
+        document.getElementById("user_id").setAttribute("u", params.get("u"));
+      }
+      setUser();
+    </script>
   </body>
 </html>
