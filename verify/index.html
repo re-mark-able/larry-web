@@ -70,8 +70,11 @@
           headers: {
             "Content-type": "application/json; charset=UTF-8",
           },
-        }).then((response) => {
-          document.getElementById("pageContent").innerHTML = response;
+        }).then(async (response) => {
+          console.log("--response--", response);
+          const data = await response.json();
+          console.log("--data--", data);
+          document.getElementById("pageContent").innerHTML = data;
         });
       }
     </script>
